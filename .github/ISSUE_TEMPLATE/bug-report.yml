@@ -1,0 +1,128 @@
+name: "🐞 Bug Report"
+description: Report a bug
+title: "[BUG]: (A short description of the bug...)"
+labels: [bug, needs-triage]
+assignees: [chimmy-changa] # TODO: Update with Zain's github username
+body:
+  - type: markdown
+    attributes:
+      value: |
+        #### Note:
+        Please search to see if an issue already exists for the bug you encountered.
+        
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: What is the problem? A clear and concise description of the bug.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behaviour
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-behaviour
+    attributes:
+      label: Current Behavior
+      description: |
+        What actually happened?
+        
+        Please include full errors, uncaught exceptions, stack traces and relevant logs.        
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Reproduction Steps
+      description: |
+        Provide a concise snippet of code that can be used to reproduce the issue.
+    validations:
+      required: true
+
+  - type: textarea
+    id: possible-solution
+    attributes:
+      label: Possible Solution (optional)
+      description: |
+        Suggest a fix/reason for the bug
+    validations:
+      required: false
+      
+  - type: input
+    id: package-version
+    attributes:
+      label: Package version used
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Chrome
+        - Firefox        
+        - Safari
+        - Microsoft Edge
+
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: Which operating system was the matlab-proxy executable launched from?
+      options:
+        - Linux
+        - Windows
+        - MacOS (Intel)
+        - MacOS (Apple Silicon)
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Information/Context (optional)
+      description: |
+        Anything else that might be relevant for troubleshooting this bug. Providing context helps us come up with a solution that is most useful in the real world.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Provide the output of the following commands 
+        
+  - type: markdown
+    attributes:
+      value: |
+        ```
+        pip freeze | grep -E "jupyter|matlab-proxy|jupyter-matlab-proxy"
+        ```
+        
+  - type: textarea
+    id: command-output-pip-freeze
+    attributes:
+      label: Command-output
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ```
+        jupyter serverextension list
+        ```
+        
+  - type: textarea
+    id: command-output-jupyter-server-extension
+    attributes:
+      label: Command-output
+    validations:
+      required: true
