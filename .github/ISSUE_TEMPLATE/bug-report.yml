@@ -2,7 +2,7 @@ name: "🐞 Bug Report"
 description: Report a bug
 title: "[BUG]: (A short description of the bug...)"
 labels: [bug, needs-triage]
-assignees: [chimmy-changa] # TODO: Update with Zain's github username
+assignees: [prabhakk-mw] 
 body:
   - type: markdown
     attributes:
