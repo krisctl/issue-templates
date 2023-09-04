@@ -1,6 +1,6 @@
 name: "🐞 Bug Report"
 description: Report a bug
-title: "[BUG]: (A short description of the bug...)"
+title: "[BUG] {{A short description of the bug...}}"
 labels: [bug, needs-triage]
 assignees: [prabhakk-mw] 
 body:
